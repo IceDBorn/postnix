@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Wolt
+Exec=firefox-esr --no-remote -P firefox-wolt --name firefox-wolt https://wolt.com/en/discovery
+Type=Application
+Icon=/home/droidian/.local/share/applications/icons/wolt.png
