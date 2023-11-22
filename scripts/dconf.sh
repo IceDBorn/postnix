@@ -2,7 +2,7 @@
 
 OPTIONS=(
     "org.gnome.desktop.datetime automatic-timezone false"
-    # "org.gnome.desktop.input-sources sources \"[('xkb', 'us'), ('xkb', 'gr')]\""
+    "org.gnome.desktop.input-sources sources \"[('xkb', 'us'), ('xkb', 'gr')]\""
     "org.gnome.desktop.interface clock-show-seconds true"
     "org.gnome.desktop.interface color-scheme 'prefer-dark'"
     "org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'"
@@ -18,7 +18,7 @@ OPTIONS=(
 
 for option in "${OPTIONS[@]}"
 do
-    if gsettings set $option; then
+    if echo "$option" | xargs gsettings set; then
         echo "Set $option successfully"
     else
         echo "Failed to set $option"
