@@ -3,5 +3,4 @@
 SCRIPTS=($(find scripts -name '*.sh' -type f))
 
 # Run all scripts
-# TODO: Fix scripts execution
-# echo "${SCRIPTS[@]}" | xargs echo
+printf "%s\n" "${SCRIPTS[@]}" | xargs -I {} echo {}
