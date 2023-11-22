@@ -2,6 +2,7 @@
 
 IDENTIFIER="# File appended"
 PAM_FILE="/etc/pam.d/common-password"
+SUDOERS_FILE="/etc/sudoers"
 
 appendFile() {
     local file="$1"
@@ -26,9 +27,14 @@ if ! grep -q "minlen=1" "$PAM_FILE"; then
     fi
 fi
 
-# Add extra config to .bashrc
-appendFile ~/.bashrc '\$SSH_CONNECTION' '
-if [[ -n $SSH_CONNECTION ]]; then
+if ! sudo grep -q "env_reset,pwfeedback" "$SUDOERS_FILE"; then
+    if sudo sed -i 's|env_reset|env_reset,pwfeedback|' "$SUDOERS_FILE"; then
+        echo "Enabled asterisks for sudo password input"
+    else
+        echo "Failed to enable asterisks for sudo password input."
+        exit 1
+    fi
+fi
 
 bashRc=$(
     cat << EOF
