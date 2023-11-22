@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Box
+Exec=firefox-esr --no-remote -P firefox-box --name firefox-box https://www.box.gr/home
+Type=Application
+Icon=/home/droidian/.local/share/applications/icons/box.png
