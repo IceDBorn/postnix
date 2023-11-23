@@ -5,9 +5,11 @@ DND_STATE=$(gsettings get org.gnome.desktop.notifications show-banners)
 if "$DND_STATE"; then
     gsettings set org.gnome.desktop.notifications show-banners false
     gsettings set org.sigxcpu.feedbackd profile 'silent'
+    amixer sset Master 0%
     notify-send "Do Not Disturb Enabled"
 else
     gsettings set org.gnome.desktop.notifications show-banners true
     gsettings set org.sigxcpu.feedbackd profile 'full'
+    amixer sset Master 100%
     notify-send "Do Not Disturb Disabled"
 fi
