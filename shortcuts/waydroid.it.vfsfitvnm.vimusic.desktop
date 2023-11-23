@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=ViMusic
+Exec=waydroid app launch it.vfsfitvnm.vimusic
+Icon=/home/droidian/.local/share/waydroid/data/icons/it.vfsfitvnm.vimusic.png
+Categories=X-WayDroid-App;
+X-Purism-FormFactor=Workstation;Mobile;
+Actions=app_settings;
+NoDisplay=false
+
+[Desktop Action app_settings]
+Name=App Settings
+Exec=waydroid app intent android.settings.APPLICATION_DETAILS_SETTINGS package:it.vfsfitvnm.vimusic
+Icon=/home/droidian/.local/share/waydroid/data/icons/com.android.settings.png
