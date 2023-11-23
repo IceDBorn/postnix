@@ -10,6 +10,7 @@ NATIVE_PACKAGES=(
     "gnome-tweaks"
     "iotas"
     "kdeconnect"
+    "libnotify-bin"
     "make"
     "nautilus"
     "neovim"
