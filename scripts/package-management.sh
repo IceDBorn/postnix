@@ -9,6 +9,7 @@ NATIVE_PACKAGES=(
     "gnome-disk-utility"
     "gnome-tweaks"
     "iotas"
+    "kdeconnect"
     "make"
     "nautilus"
     "neovim"
