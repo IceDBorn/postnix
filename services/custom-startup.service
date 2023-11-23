@@ -1,0 +1,7 @@
+[Service]
+Type=oneshot
+RemainAfterExit=true
+StandardOutput=journal
+ExecStart=/home/droidian/.local/bin/startup
+[Install]
+WantedBy=default.target

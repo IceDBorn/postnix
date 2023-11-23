@@ -3,6 +3,9 @@
 IDENTIFIER="# File appended"
 PAM_FILE="/etc/pam.d/common-password"
 SUDOERS_FILE="/etc/sudoers"
+SERVICES_FOLDER="$HOME/.local/share/systemd/user"
+STARTUP_SERVICE="custom-startup.service"
+STARTUP_SERVICE_FILE="$SERVICES_FOLDER/$STARTUP_SERVICE"
 
 appendFile() {
     local file="$1"
@@ -37,6 +40,16 @@ if ! sudo grep -q "env_reset,pwfeedback" "$SUDOERS_FILE"; then
     fi
 fi
 
+if ! test -f "$STARTUP_SERVICE_FILE"; then
+    mkdir -p "$SERVICES_FOLDER"
+    cp "services/$STARTUP_SERVICE" "$STARTUP_SERVICE_FILE"
+    if systemctl --user enable "$STARTUP_SERVICE"; then
+        echo "Enabled startup service successfully"
+    else
+        echo "Failed to enable startup service."
+    fi
+fi
+
 bashRc=$(
     cat << EOF
 $IDENTIFIER
@@ -53,8 +66,7 @@ EOF
 profile=$(
     cat << EOF
 $IDENTIFIER
-gnome-clocks --hidden &
-chatty --daemon &
+$HOME/.local/bin/login
 EOF
 )
 

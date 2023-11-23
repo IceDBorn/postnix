@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+aplay "$HOME/Music/startup.wav"
