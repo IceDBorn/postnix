@@ -27,6 +27,7 @@ if ! grep -q "minlen=1" "$PAM_FILE"; then
     fi
 fi
 
+# Enable asterisks for sudo password input
 if ! sudo grep -q "env_reset,pwfeedback" "$SUDOERS_FILE"; then
     if sudo sed -i 's|env_reset|env_reset,pwfeedback|' "$SUDOERS_FILE"; then
         echo "Enabled asterisks for sudo password input"
@@ -46,7 +47,6 @@ fi
 alias update="sudo apt update -y && sudo apt upgrade -y ; sudo flatpak update -y"
 alias rmodem="sudo systemctl restart ModemManager.service"
 alias rwayd="sudo waydroid container restart"
-
 EOF
 )
 
