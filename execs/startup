@@ -1,58 +1,52 @@
 #!/usr/bin/env bash
 
 function toggleDND () {
-  if ! [[ $1 == $(gsettings get org.gnome.desktop.notifications show-banners) ]]; then
-    gsettings set org.gnome.desktop.notifications show-banners "$1"
-    gsettings set org.sigxcpu.feedbackd profile "$2"
-    amixer sset Master "$3"
-    notify-send "Do Not Disturb" "$4"
-  fi
+    if ! [[ $1 == $(gsettings get org.gnome.desktop.notifications show-banners) ]]; then
+        gsettings set org.gnome.desktop.notifications show-banners "$1"
+        gsettings set org.sigxcpu.feedbackd profile "$2"
+        amixer sset Master "$3"
+        notify-send "Do Not Disturb" "$4"
+    fi
 }
 
 aplay "$HOME/Music/startup.wav" &> /dev/null &
 
 # Enable cellular if it is disabled
 (
-  while :
-  do
-    sleep 60
+    while :
+    do
+        if mmcli -m 0 | grep "disabled"; then
+            mmcli -m 0 -r
+        fi
 
-    if mmcli -m 0 | grep "disabled"; then
-      mmcli -m 0 -r
-    fi
-  done
+        sleep 60
+    done
 ) &
 
 # TODO: Check for wifi signal and set cellular to 2G, mobile data off
 # (
 # while :
 # do
-#   
+#
 # done
 # )
 
 # Toggle DnD
 (
-  while :
-  do
-    sleep 60
+    while :
+    do
+        now=$(date "+%H%M" | awk '$0*=1')
 
-    now=$(date "+%H%M" | awk '$0*=1')
-
-    if (( $now > 50 )); then
-      if (( $now > 850 )); then
-        toggleDND "true" "full" "100%" "Disabled"
-        continue
-        if (( $now > 930 )); then
-          toggleDND "false" "silent" "0%" "Enabled"
-          continue
-          if (( $now > 1730 )); then
+        if (( $now > 1730 )); then
             toggleDND "true" "full" "100%" "Disabled"
-            continue
-          fi
+        elif (( $now > 930 )); then
+            toggleDND "false" "silent" "0%" "Enabled"
+        elif (( $now > 850 )); then
+            toggleDND "true" "full" "100%" "Disabled"
+        elif (( $now > 50 )); then
+            toggleDND "false" "silent" "0%" "Enabled"
         fi
-      fi
-      toggleDND "false" "silent" "0%" "Enabled"
-    fi
-  done
+
+        sleep 60
+    done
 ) &

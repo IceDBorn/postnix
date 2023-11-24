@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 if ! ps aux | grep -q [c]hatty; then
-  chatty --daemon & disown
+    chatty --daemon & disown
 fi
 
 if ! ps aux | grep -q [g]nome-clocks; then
-  gnome-clocks --hidden & disown
+    gnome-clocks --hidden & disown
 fi
-
