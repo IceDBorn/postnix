@@ -58,7 +58,6 @@ if [[ -n \$SSH_CONNECTION ]]; then
 fi
 
 alias update="sudo apt update -y && sudo apt upgrade -y ; sudo flatpak update -y"
-alias rmodem="sudo systemctl restart ModemManager.service"
 alias rwayd="sudo waydroid container restart"
 EOF
 )

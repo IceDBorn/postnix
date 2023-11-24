@@ -1,16 +1,37 @@
 #!/usr/bin/env bash
 
-  function toggleDND () {
-    if ! [[ $1 == $(gsettings get org.gnome.desktop.notifications show-banners) ]]; then
-      gsettings set org.gnome.desktop.notifications show-banners "$1"
-      gsettings set org.sigxcpu.feedbackd profile "$2"
-      amixer sset Master "$3"
-      notify-send "Do Not Disturb" "$4"
-    fi
-  }
+function toggleDND () {
+  if ! [[ $1 == $(gsettings get org.gnome.desktop.notifications show-banners) ]]; then
+    gsettings set org.gnome.desktop.notifications show-banners "$1"
+    gsettings set org.sigxcpu.feedbackd profile "$2"
+    amixer sset Master "$3"
+    notify-send "Do Not Disturb" "$4"
+  fi
+}
 
 aplay "$HOME/Music/startup.wav" &> /dev/null &
 
+# Enable cellular if it is disabled
+(
+  while :
+  do
+    sleep 60
+
+    if mmcli -m 0 | grep "disabled"; then
+      mmcli -m 0 -r
+    fi
+  done
+) &
+
+# TODO: Check for wifi signal and set cellular to 2G, mobile data off
+# (
+# while :
+# do
+#   
+# done
+# )
+
+# Toggle DnD
 (
   while :
   do
