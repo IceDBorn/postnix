@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 OPTIONS=(
+    "org.gnome.desktop.background picture-uri 'file:///home/droidian/Pictures/wallpaper.jpg'"
+    "org.gnome.desktop.background picture-uri-dark 'file:///home/droidian/Pictures/wallpaper.jpg'"
     "org.gnome.desktop.datetime automatic-timezone false"
     "org.gnome.desktop.input-sources sources \"[('xkb', 'us'), ('xkb', 'gr')]\""
     "org.gnome.desktop.interface clock-show-seconds true"
