@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 function toggleDND () {
-    if ! [[ $1 == $(gsettings get org.gnome.desktop.notifications show-banners) ]]; then
-        gsettings set org.gnome.desktop.notifications show-banners "$1"
-        gsettings set org.sigxcpu.feedbackd profile "$2"
-        amixer sset Master "$3"
-        notify-send "Do Not Disturb" "$4"
+    feedback="org.sigxcpu.feedbackd profile"
+    getFeedback=$(gsettings get $feedback)
+
+    if ! [ "$1" = "$(echo "${getFeedback//\'}")" ]; then
+        gsettings set $feedback "$1"
+        amixer sset Master "$2"
+        notify-send "Do Not Disturb" "$3"
     fi
 }
 
@@ -38,13 +40,13 @@ aplay "$HOME/Music/startup.wav" &> /dev/null &
         now=$(date "+%H%M" | awk '$0*=1')
 
         if (( $now > 1730 )); then
-            toggleDND "true" "full" "100%" "Disabled"
+            toggleDND "full" "100%" "Disabled"
         elif (( $now > 930 )); then
-            toggleDND "false" "silent" "0%" "Enabled"
+            toggleDND "silent" "0%" "Enabled"
         elif (( $now > 850 )); then
-            toggleDND "true" "full" "100%" "Disabled"
+            toggleDND "full" "100%" "Disabled"
         elif (( $now > 50 )); then
-            toggleDND "false" "silent" "0%" "Enabled"
+            toggleDND "silent" "0%" "Enabled"
         fi
 
         sleep 60
