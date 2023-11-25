@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=myDEI
+Exec=waydroid app launch gr.dei.deimobile
+Icon=/home/droidian/.local/share/waydroid/data/icons/gr.dei.deimobile.png
+Categories=X-WayDroid-App;
+X-Purism-FormFactor=Workstation;Mobile;
+Actions=app_settings;
+NoDisplay=false
+
+[Desktop Action app_settings]
+Name=App Settings
+Exec=waydroid app intent android.settings.APPLICATION_DETAILS_SETTINGS package:gr.dei.deimobile
+Icon=/home/droidian/.local/share/waydroid/data/icons/com.android.settings.png
