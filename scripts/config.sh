@@ -40,6 +40,7 @@ if ! sudo grep -q "env_reset,pwfeedback" "$SUDOERS_FILE"; then
     fi
 fi
 
+# Enable startup service
 if ! test -f "$STARTUP_SERVICE_FILE"; then
     mkdir -p "$SERVICES_FOLDER"
     cp "services/$STARTUP_SERVICE" "$STARTUP_SERVICE_FILE"
