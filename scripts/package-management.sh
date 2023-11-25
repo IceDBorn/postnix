@@ -65,6 +65,13 @@ else
     exit 1
 fi
 
+if pip install --break-system-package pyclip; then
+    echo "Installed pyclip successfully"
+else
+    echo "Failed to install pyclip."
+    exit 1
+fi
+
 # Remove packages
 if sudo apt purge -y "${PURGE_PACKAGES[@]}"; then
     echo "Packages removed successfully"
