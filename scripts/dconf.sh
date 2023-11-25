@@ -9,6 +9,7 @@ OPTIONS=(
     "org.gnome.desktop.interface color-scheme 'prefer-dark'"
     "org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'"
     "org.gnome.desktop.interface show-battery-percentage true"
+    "org.gnome.desktop.notifications show-banners false"
     "org.gnome.desktop.privacy remember-recent-files false"
     "org.gnome.desktop.session idle-delay 60"
     "org.gnome.nautilus.preferences click-policy 'double'"
