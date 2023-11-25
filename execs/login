@@ -14,3 +14,8 @@ fi
 if ! ps aux | grep -q [k]deconnectd; then
     /usr/lib/aarch64-linux-gnu/libexec/kdeconnectd &> /dev/null & disown
 fi
+
+# Start waydroid session
+if ! waydroid status | grep -q 'Session.*RUNNING'; then
+    sleep 3 && waydroid session start & disown
+fi
