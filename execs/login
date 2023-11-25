@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
+# Start sms daemon
 if ! ps aux | grep -q [c]hatty; then
     chatty --daemon & disown
 fi
 
+# Start alarm daemon
 if ! ps aux | grep -q [g]nome-clocks; then
     gnome-clocks --hidden & disown
+fi
+
+# Start kdeconnect daemon
+if ! ps aux | grep -q [k]deconnectd; then
+    /usr/lib/aarch64-linux-gnu/libexec/kdeconnectd &> /dev/null & disown
 fi
