@@ -17,6 +17,7 @@ OPTIONS=(
     "org.gnome.nautilus.preferences show-delete-permanently true"
     "org.gnome.settings-daemon.plugins.power ambient-enabled false"
     "org.gtk.gtk4.Settings.FileChooser sort-directories-first true"
+    "sm.puri.phoc scale-to-fit true"
     "sm.puri.phosh.notifications wakeup-screen-urgency 'low'"
 )
 
