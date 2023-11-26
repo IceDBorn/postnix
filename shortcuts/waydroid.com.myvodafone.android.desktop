@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=My Vodafone
+Exec=waydroid app launch com.myvodafone.android
+Icon=/home/droidian/.local/share/waydroid/data/icons/com.myvodafone.android.png
+Categories=X-WayDroid-App;
+X-Purism-FormFactor=Workstation;Mobile;
+Actions=app_settings;
+NoDisplay=false
+
+[Desktop Action app_settings]
+Name=App Settings
+Exec=waydroid app intent android.settings.APPLICATION_DETAILS_SETTINGS package:com.myvodafone.android
+Icon=/home/droidian/.local/share/waydroid/data/icons/com.android.settings.png
