@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Piped
+Exec=firefox-esr --no-remote -P firefox-piped --name firefox-piped https://piped.video/feed
+Type=Application
+Icon=/home/droidian/.local/share/applications/icons/piped.png
