@@ -37,6 +37,9 @@ aplay "$HOME/Music/startup.wav" &> /dev/null &
 (
     while :
     do
+        toggleDND "full" "100%"
+        currentDay=$(date +%a)
+        currentHour=$(date +%H | awk '$0*=1')
         now=$(date "+%H%M" | awk '$0*=1')
 
         if (( $now > 1730 )); then
