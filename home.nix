@@ -7,13 +7,6 @@
 let
   inherit (lib) filterAttrs;
 
-  driversEnv =
-    with pkgs;
-    buildEnv {
-      name = "graphics-drivers";
-      paths = [ mesa.drivers ];
-    };
-
   getModules =
     path:
     builtins.map (dir: ./. + ("/modules/" + dir)) (
@@ -28,11 +21,6 @@ in
   home.username = "user";
 
   home.packages = with pkgs; [
-    (runCommand "graphics-drivers" { } ''
-      mkdir -p $out/drivers ; cd $out/drivers
-      ln -s "${driversEnv}" opengl-driver
-    '')
-
     authenticator
     calls
     celluloid
