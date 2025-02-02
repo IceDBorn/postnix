@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-wf-recorder --file="$(date +'%H-%M-%S-%d-%m-%Y')".mp4
