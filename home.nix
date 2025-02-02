@@ -32,6 +32,7 @@ in
     gnome-clocks
     gnome-contacts
     gnome-maps
+    gnome-software
     gnome-text-editor
     harmony-music
     loupe
