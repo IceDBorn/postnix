@@ -35,6 +35,7 @@ in
     gnome-software
     gnome-text-editor
     harmony-music
+    lazygit
     loupe
     newsflash
     nixfmt-rfc-style
