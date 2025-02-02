@@ -30,7 +30,7 @@ in
 
   home.packages = [ package ];
 
-  xdg.desktopEntries.zen-pwas = {
+  xdg.desktopEntries.proton = {
     exec = "proton";
     icon = "proton";
     name = "Proton";

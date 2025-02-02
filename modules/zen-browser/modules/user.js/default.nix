@@ -44,7 +44,7 @@ in
   home.file = {
     ".zen/default/user.js".text = userJs;
 
-    ".zen/protonmail/user.js".text =
+    ".zen/proton/user.js".text =
       userJs
       + ''
         user_pref("browser.toolbars.bookmarks.visibility", "never");
