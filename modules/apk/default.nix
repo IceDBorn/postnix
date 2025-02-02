@@ -10,7 +10,7 @@
     '')
 
     (pkgs.writeShellScriptBin "install-packages" ''
-      sudo apk add postmarketos-base-ui-audio-pipewire
+      sudo apk add postmarketos-base-ui-audio-pipewire signal-cli
     '')
   ];
 }
