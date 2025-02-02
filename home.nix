@@ -24,6 +24,7 @@ in
     authenticator
     calls
     celluloid
+    epiphany
     flare-signal
     fractal
     git
