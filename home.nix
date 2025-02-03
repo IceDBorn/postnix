@@ -22,9 +22,7 @@ in
 
   home.packages = with pkgs; [
     authenticator
-    brave
     calls
-    epiphany
     flare-signal
     fractal
     git
