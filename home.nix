@@ -24,7 +24,6 @@ in
     authenticator
     brave
     calls
-    celluloid
     epiphany
     flare-signal
     fractal
@@ -42,6 +41,7 @@ in
     newsflash
     nixfmt-rfc-style
     protonvpn-gui
+    showtime
     snapshot
   ];
 }
