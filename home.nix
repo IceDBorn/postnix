@@ -21,10 +21,13 @@ in
   home.username = "user";
 
   home.packages = with pkgs; [
+    amberol
     authenticator
     calls
+    file-roller
     flare-signal
     fractal
+    fragments
     git
     gnome-calculator
     gnome-calendar
