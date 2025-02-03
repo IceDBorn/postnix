@@ -78,8 +78,6 @@ in
       defaultApplications = {
         "application/json" = editor;
         "application/pdf" = browser;
-        "application/x-bittorrent" = "de.haeckerfelix.Fragments.desktop";
-        "application/x-ms-dos-executable" = "wine.desktop";
         "application/x-shellscript" = editor;
         "application/x-wine-extension-ini" = editor;
         "application/x-zerosize" = editor;

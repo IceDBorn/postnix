@@ -24,10 +24,10 @@ in
     amberol
     authenticator
     calls
+    curl
     file-roller
     flare-signal
     fractal
-    fragments
     git
     gnome-calculator
     gnome-calendar
@@ -39,6 +39,7 @@ in
     harmony-music
     lazygit
     loupe
+    nano
     newsflash
     nixfmt-rfc-style
     protonvpn-gui
