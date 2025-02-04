@@ -43,13 +43,6 @@ in
   };
 
   dconf.settings = {
-    "org/gtk/settings/file-chooser" = {
-      sort-directories-first = true;
-      date-format = "with-time";
-      show-type-column = false;
-      show-hidden = true;
-    };
-
     "org/gnome/desktop/interface" = {
       accent-color = "#7E57C2";
       color-scheme = "prefer-dark";
@@ -62,8 +55,25 @@ in
 
     "org/gnome/desktop/privacy" = {
       remember-recent-files = false;
+      remove-old-temp-files = true;
     };
 
+    "org/sigxcpu/feedbackd/application/sm-puri-squeekboard".quick-settings = "silent";
+
+    "org/gtk/settings/file-chooser" = {
+      sort-directories-first = true;
+      date-format = "with-time";
+      show-type-column = false;
+      show-hidden = true;
+    };
+
+    "sm/puri/phoc".scale-to-fit = true;
+    "sm/puri/phosh".favorites = [ ];
+
+    "sm/puri/phosh/plugins".quick-settings = [
+      "wifi-hotspot-quick-setting"
+      "mobile-data-quick-setting"
+    ];
   };
 
   xdg = {
