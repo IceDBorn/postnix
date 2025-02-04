@@ -21,11 +21,9 @@ in
   home.username = "user";
 
   home.packages = with pkgs; [
-    amberol
     authenticator
     calls
     curl
-    file-roller
     flare-signal
     fractal
     git
@@ -34,16 +32,12 @@ in
     gnome-clocks
     gnome-contacts
     gnome-maps
-    gnome-software
-    gnome-text-editor
     harmony-music
     lazygit
-    loupe
     nano
     newsflash
     nixfmt-rfc-style
     protonvpn-gui
-    showtime
     snapshot
   ];
 }
