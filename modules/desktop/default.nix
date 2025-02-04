@@ -19,6 +19,7 @@ let
 
   imageViewer = "org.gnome.Loupe.desktop";
   videoPlayer = "showtime";
+  wallpaper = "file:///home/user/Pictures/wallpaper.jpg";
 in
 {
   gtk = {
@@ -52,6 +53,10 @@ in
       show-battery-percentage = true;
       enable-hot-corners = false;
     };
+
+    "org/gnome/desktop/background".picture-uri = wallpaper;
+    "org/gnome/desktop/background".picture-uri-dark = wallpaper;
+    "org/gnome/desktop/screensaver".picture-uri = wallpaper;
 
     "org/gnome/desktop/privacy" = {
       remember-recent-files = false;
@@ -127,6 +132,9 @@ in
       size = 24;
     };
 
-    file.".config/gtk-4.0/gtk.css".text = gtkCss;
+    file = {
+      ".config/gtk-4.0/gtk.css".text = gtkCss;
+      "Pictures/wallpaper.jpg".source = ./wallpaper.jpg;
+    };
   };
 }
