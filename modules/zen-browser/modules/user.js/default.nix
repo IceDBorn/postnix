@@ -29,9 +29,10 @@ let
     user_pref("zen.theme.color-prefs.amoled", true);
     user_pref("zen.theme.color-prefs.use-workspace-colors", false);
     user_pref("zen.urlbar.behavior", "float");
-    user_pref("zen.view.compact", true);
-    user_pref("zen.view.compact.hide-tabbar", true);
-    user_pref("zen.view.compact.hide-toolbar", true);
+    user_pref("zen.view.compact", false);
+    user_pref("zen.view.compact.hide-tabbar", false);
+    user_pref("zen.view.compact.hide-toolbar", false);
+    user_pref("zen.view.sidebar-expanded", false);
     user_pref("zen.view.show-newtab-button-border-top", false);
     user_pref("zen.view.sidebar-expanded.on-hover", false);
     user_pref("zen.view.use-single-toolbar", false);
@@ -45,12 +46,6 @@ in
     ".zen/default/user.js".text = userJs;
 
     ".zen/proton/user.js".text =
-      userJs
-      + ''
-        user_pref("browser.toolbars.bookmarks.visibility", "never");
-        user_pref("zen.tab-unloader.enabled", false);
-        user_pref("zen.view.sidebar-expanded", false);
-        user_pref("zen.view.compact.hide-tabbar", false);
-      '';
+      userJs + ''user_pref("browser.toolbars.bookmarks.visibility", "never");'';
   };
 }
