@@ -8,8 +8,6 @@ let
   inherit (lib) makeSearchPathOutput;
 in
 {
-  home.packages = [ pkgs.nautilus ];
-
   home.sessionVariables = {
     # Fix for missing audio/video information in properties https://github.com/NixOS/nixpkgs/issues/53631
     GST_PLUGIN_SYSTEM_PATH_1_0 = makeSearchPathOutput "lib" "lib/gstreamer-1.0" (
