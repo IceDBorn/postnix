@@ -34,6 +34,7 @@ in
     gnome-maps
     harmony-music
     lazygit
+    mission-center
     nano
     newsflash
     nixfmt-rfc-style
