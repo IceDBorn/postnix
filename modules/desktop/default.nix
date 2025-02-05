@@ -9,7 +9,7 @@ let
   editor = "gnome-text-editor";
 
   gtkCss = ''
-    @define-color accent_bg_color #7E57C2;
+    @define-color accent_bg_color #9141ac;
     @define-color accent_color @accent_bg_color;
 
     :root {
@@ -45,7 +45,7 @@ in
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      accent-color = "#7E57C2";
+      accent-color = "purple";
       color-scheme = "prefer-dark";
       clock-show-seconds = true;
       clock-show-date = false;

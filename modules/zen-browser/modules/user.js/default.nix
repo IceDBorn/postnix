@@ -6,7 +6,7 @@
 }:
 
 let
-  accentColor = "#7E57C2";
+  accentColor = "#9141ac";
   firefoxVersion = builtins.substring 0 5 pkgs.firefox.version;
 
   userJs = ''
