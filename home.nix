@@ -24,6 +24,7 @@ in
     authenticator
     calls
     curl
+    decoder
     flare-signal
     fractal
     git
