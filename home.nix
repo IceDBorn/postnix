@@ -42,6 +42,7 @@ in
     newsflash
     nixfmt-rfc-style
     protonvpn-gui
+    resources
     snapshot
   ];
 }
