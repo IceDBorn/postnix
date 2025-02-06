@@ -37,6 +37,7 @@ in
     harmony-music
     lazygit
     mission-center
+    mousai
     nano
     newsflash
     nixfmt-rfc-style
