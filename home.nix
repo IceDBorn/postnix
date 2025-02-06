@@ -33,6 +33,7 @@ in
     gnome-clocks
     gnome-contacts
     gnome-maps
+    gnome-podcasts
     harmony-music
     lazygit
     mission-center
