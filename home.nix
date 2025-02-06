@@ -36,7 +36,6 @@ in
     gnome-podcasts
     harmony-music
     lazygit
-    mission-center
     mousai
     nano
     newsflash
