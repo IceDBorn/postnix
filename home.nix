@@ -43,6 +43,5 @@ in
     powersupply
     protonvpn-gui
     resources
-    snapshot
   ];
 }
