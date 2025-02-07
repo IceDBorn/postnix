@@ -97,7 +97,6 @@ in
   home.file = {
     ".config/qt5ct/qt5ct.conf".source = ./qt5ct.conf;
     ".config/qt6ct/qt6ct.conf".source = ./qt6ct.conf;
-
     ".local/share/applications/qt5ct.desktop".text = "";
     ".local/share/applications/qt6ct.desktop".text = "";
   };

@@ -1,12 +1,8 @@
 {
   pkgs,
-  lib,
   ...
 }:
 
-let
-  inherit (lib) mapAttrs;
-in
 {
   home.file = {
     ".config/zsh/p10k.zsh".source =

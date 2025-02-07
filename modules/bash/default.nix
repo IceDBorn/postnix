@@ -1,3 +1,3 @@
 {
-  home.file.".bashrc".text = "zsh";
+  home.file.".bashrc".text = "";
 }

@@ -6,7 +6,7 @@
 let
   audioPlayer = "io.bassi.Amberol.desktop";
   browser = "zen.desktop";
-  editor = "gnome-text-editor";
+  editor = "org.gnome.TextEditor";
 
   gtkCss = ''
     @define-color accent_bg_color #9141ac;
@@ -18,7 +18,7 @@ let
   '';
 
   imageViewer = "org.gnome.Loupe.desktop";
-  videoPlayer = "showtime";
+  videoPlayer = "org.gnome.Showtime";
   wallpaper = "file:///home/user/Pictures/wallpaper.jpg";
 in
 {
