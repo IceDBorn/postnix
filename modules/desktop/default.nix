@@ -63,8 +63,6 @@ in
       remove-old-temp-files = true;
     };
 
-    "org/sigxcpu/feedbackd/application/sm-puri-squeekboard".quick-settings = "silent";
-
     "org/gtk/settings/file-chooser" = {
       sort-directories-first = true;
       date-format = "with-time";
