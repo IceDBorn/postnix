@@ -25,7 +25,6 @@ in
     calls
     curl
     decoder
-    flare-signal
     fractal
     git
     gnome-calculator
