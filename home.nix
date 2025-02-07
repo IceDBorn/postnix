@@ -41,6 +41,5 @@ in
     nixfmt-rfc-style
     powersupply
     protonvpn-gui
-    resources
   ];
 }
