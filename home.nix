@@ -40,6 +40,7 @@ in
     nano
     newsflash
     nixfmt-rfc-style
+    powersupply
     protonvpn-gui
     resources
     snapshot
