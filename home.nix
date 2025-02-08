@@ -37,6 +37,7 @@ in
     lazygit
     mousai
     nano
+    ncdu
     newsflash
     nixfmt-rfc-style
     powersupply
