@@ -2,6 +2,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    calls-patch = {
+      url = "git+https://gitea.knp.one/jim3692/calls-patch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nerivations = {
       url = "github:icedborn/nerivations";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +26,7 @@
   outputs =
     {
       nixpkgs,
+      calls-patch,
       home-manager,
       nerivations,
       zen-browser,
@@ -36,6 +42,7 @@
         inherit pkgs;
 
         extraSpecialArgs = {
+          calls = calls-patch.packages.${system}.default;
           zen-browser = zen-browser.packages.${system}.default;
         };
 

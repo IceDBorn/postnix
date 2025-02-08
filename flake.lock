@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "calls-patch": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1739072712,
+        "narHash": "sha256-BnSVOWKz40Ef7ZOE2CSoz0m39Lu9pmNCHsXoV2SQYsg=",
+        "ref": "refs/heads/master",
+        "rev": "3735024ec16bb6bff33ee8357461dd4494d642fd",
+        "revCount": 4,
+        "type": "git",
+        "url": "https://gitea.knp.one/jim3692/calls-patch"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitea.knp.one/jim3692/calls-patch"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -58,6 +78,7 @@
     },
     "root": {
       "inputs": {
+        "calls-patch": "calls-patch",
         "home-manager": "home-manager",
         "nerivations": "nerivations",
         "nixpkgs": "nixpkgs",

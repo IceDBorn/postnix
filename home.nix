@@ -22,7 +22,6 @@ in
 
   home.packages = with pkgs; [
     authenticator
-    calls
     curl
     decoder
     fractal
