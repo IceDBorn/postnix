@@ -11,6 +11,12 @@
     ".config/zsh/p10k-theme.zsh".source = ./p10k-theme.zsh;
   };
 
+  home.packages = [
+    (pkgs.writeShellScriptBin "set-zsh-default" ''
+      sudo sed -i 's|/bin/ash|/home/user/.nix-profile/bin/zsh|g' /etc/passwd
+    '')
+  ];
+
   programs.zsh = {
     enable = true;
 
