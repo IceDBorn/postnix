@@ -3,12 +3,9 @@
   ...
 }:
 
-let
-  extraArgs = "-k 1 -K 0d";
-in
 {
   home.packages = [
-    (pkgs.writeShellScriptBin "nix-gc" "nh clean all ${extraArgs}")
+    (pkgs.writeShellScriptBin "nix-gc" "nh clean user")
   ];
 
   programs.nh = {
@@ -16,7 +13,6 @@ in
 
     clean = {
       enable = true;
-      extraArgs = extraArgs;
       dates = "Mon *-*-* 00:00:00";
     };
   };
