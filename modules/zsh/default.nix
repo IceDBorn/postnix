@@ -32,12 +32,7 @@
 
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      btrfs-compress = "sudo btrfs filesystem defrag -czstd -r -v";
-      reboot-uefi = "sudo systemctl reboot --firmware-setup";
-      ssh = "TERM=xterm-256color ssh";
-    };
+    shellAliases.ssh = "TERM=xterm-256color ssh";
 
     initExtra = ''
       if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
@@ -47,6 +42,12 @@
       [[ ! -f ~/.config/zsh/p10k.zsh ]] || source ~/.config/zsh/p10k.zsh
       [[ ! -f ~/.config/zsh/p10k-theme.zsh ]] || source ~/.config/zsh/p10k-theme.zsh
       unsetopt PROMPT_SP
+
+      PATH="$PATH:$HOME/.local/bin"
+      if [ -e /home/user/.nix-profile/etc/profile.d/nix.sh ]; then . /home/user/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+      # Inject dbus address
+      . <(ps | grep gnome-session-binary | head -n1 | awk '{print $1}' | xargs -I {} bash -c 'cat /proc/{}/environ | tr "\0" "\n" | grep DBUS' | xargs -I {} echo "export {}")
     '';
   };
 }
