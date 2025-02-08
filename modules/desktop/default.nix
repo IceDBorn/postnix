@@ -70,6 +70,7 @@ in
       show-hidden = true;
     };
 
+    "org/sigxcpu/feedbackd/application/mobi-phosh-shell".profile = "silent";
     "sm/puri/phoc".scale-to-fit = true;
     "sm/puri/phosh".favorites = [ ];
 
