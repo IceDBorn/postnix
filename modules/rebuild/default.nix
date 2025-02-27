@@ -10,7 +10,7 @@
         case $1 in
           -u)
             update="-u"
-            apkUpdate="sudo apk update ; sudo apk upgrade"
+            apkUpdate="sudo apk update && sudo apk upgrade"
             shift
             ;;
           *)
