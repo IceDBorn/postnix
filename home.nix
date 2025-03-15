@@ -32,7 +32,6 @@ in
     gnome-contacts
     gnome-maps
     gnome-podcasts
-    gscreenshot
     harmony-music
     lazygit
     mousai
