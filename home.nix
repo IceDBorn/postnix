@@ -42,6 +42,7 @@ in
     ncdu
     newsflash
     nixfmt-rfc-style
+    openssh
     powersupply
     showtime
   ];
