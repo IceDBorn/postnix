@@ -23,23 +23,26 @@ in
   home.packages = with pkgs; [
     authenticator
     curl
+    decibels
     decoder
+    file-roller
     fractal
     git
     gnome-calculator
     gnome-calendar
-    gnome-clocks
     gnome-contacts
     gnome-maps
     gnome-podcasts
+    gnome-text-editor
     harmony-music
     lazygit
+    loupe
     mousai
     nano
     ncdu
     newsflash
     nixfmt-rfc-style
     powersupply
-    protonvpn-gui
+    showtime
   ];
 }
