@@ -16,9 +16,9 @@ in
 {
   imports = getModules (./modules);
 
-  home.homeDirectory = "/home/user";
+  home.homeDirectory = "/home/icedborn";
   home.stateVersion = "24.11";
-  home.username = "user";
+  home.username = "icedborn";
 
   home.packages = with pkgs; [
     authenticator

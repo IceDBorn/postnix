@@ -25,7 +25,7 @@ in
     (writeShellScriptBin "enable-mesa-symlink-service" ''
       SERVICE_NAME="symlink-mesa-driver"
       SERVICE_FILE="/etc/init.d/$SERVICE_NAME"
-      SOURCE_DIR="/home/user/.nix-profile/drivers/opengl-driver"
+      SOURCE_DIR="/home/icedborn/.nix-profile/drivers/opengl-driver"
       TARGET_DIR="/run/opengl-driver"
 
       [ -f "$SERVICE_FILE" ] && echo "Service already installed" && exit

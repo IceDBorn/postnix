@@ -13,7 +13,7 @@
 
   home.packages = [
     (pkgs.writeShellScriptBin "set-zsh-default" ''
-      sudo sed -i 's|/bin/ash|/home/user/.nix-profile/bin/zsh|g' /etc/passwd
+      sudo sed -i 's|/bin/ash|/home/icedborn/.nix-profile/bin/zsh|g' /etc/passwd
     '')
   ];
 
@@ -44,7 +44,7 @@
       unsetopt PROMPT_SP
 
       PATH="$PATH:$HOME/.local/bin"
-      if [ -e /home/user/.nix-profile/etc/profile.d/nix.sh ]; then . /home/user/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+      if [ -e /home/icedborn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/icedborn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
       # Inject dbus address
       . <(ps | grep gnome-session-binary | head -n1 | awk '{print $1}' | xargs -I {} bash -c 'cat /proc/{}/environ | tr "\0" "\n" | grep DBUS' | xargs -I {} echo "export {}")

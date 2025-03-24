@@ -19,7 +19,7 @@ let
 
   imageViewer = "org.gnome.Loupe.desktop";
   videoPlayer = "org.gnome.Showtime";
-  wallpaper = "file:///home/user/Pictures/wallpaper.jpg";
+  wallpaper = "file:///home/icedborn/Pictures/wallpaper.jpg";
 in
 {
   gtk = {

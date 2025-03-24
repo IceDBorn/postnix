@@ -38,7 +38,7 @@
     in
     home-manager
     // {
-      homeConfigurations."user" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."icedborn" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         extraSpecialArgs = {
