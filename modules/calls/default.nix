@@ -16,4 +16,6 @@ in
 {
   imports = getModules (./modules);
   home.packages = [ pkgs.calls ];
+
+  nixpkgs.overlays = [ (import ./fix-call-audio-patch.nix) ];
 }

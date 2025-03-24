@@ -20,7 +20,7 @@
         esac
       done
 
-      $apkUpdate
+      sh -c "$apkUpdate"
       nh home switch ~/.config/home-manager $update
     '')
   ];

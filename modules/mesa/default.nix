@@ -8,7 +8,7 @@ let
     with pkgs;
     buildEnv {
       name = "graphics-drivers";
-      paths = [ mesa.drivers ];
+      paths = [ mesa ];
     };
 in
 {
