@@ -3,19 +3,22 @@
   ...
 }:
 
+let
+  package = pkgs.gnome-clocks;
+in
 {
-  home.packages = [ pkgs.gnome-clocks ];
+  home.packages = [ package ];
 
-  systemd.user.services.gnome-clocks-startup = {
+  systemd.user.services.gnome-clocks = {
     Unit.Description = "Gnome clocks";
-    Install.WantedBy = [ "graphical-session.target" ];
 
     Service = {
-        ExecStart = "${pkgs.gnome-clocks}/bin/gnome-clocks --gapplication-service";
-        Nice = "-20";
-        Restart = "on-failure";
-        StartLimitIntervalSec = 60;
-        StartLimitBurst = 60;
+      BusName = "org.gnome.clocks";
+      ExecStart = "${package}/bin/gnome-clocks";
+      Nice = "-20";
+      Restart = "on-failure";
+      StartLimitBurst = 60;
+      Type = "dbus";
     };
   };
 }
