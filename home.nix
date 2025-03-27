@@ -23,7 +23,6 @@ in
   home.packages = with pkgs; [
     authenticator
     curl
-    decibels
     decoder
     file-roller
     fractal
