@@ -30,7 +30,6 @@ in
     git
     gnome-calculator
     gnome-calendar
-    gnome-contacts
     gnome-maps
     gnome-podcasts
     gnome-text-editor
