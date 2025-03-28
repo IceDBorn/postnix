@@ -27,7 +27,7 @@
   ];
 
   systemd.user.services = {
-    gnome-calls-startup = {
+    gnome-calls = {
       Unit.Description = "Gnome calls";
       Install.WantedBy = [ "graphical-session.target" ];
 
@@ -40,7 +40,7 @@
       };
     };
 
-    call-audio-handler-startup = {
+    call-audio-handler = {
       Unit.Description = "Call audio handler";
       Install.WantedBy = [ "graphical-session.target" ];
 
