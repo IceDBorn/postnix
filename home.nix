@@ -33,7 +33,6 @@ in
     gnome-text-editor
     harmony-music
     lazygit
-    loupe
     mousai
     nano
     ncdu
