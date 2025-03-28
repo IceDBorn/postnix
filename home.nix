@@ -28,7 +28,6 @@ in
     git
     gnome-calculator
     gnome-calendar
-    gnome-podcasts
     gnome-text-editor
     harmony-music
     lazygit
