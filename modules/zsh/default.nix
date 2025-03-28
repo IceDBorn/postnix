@@ -45,9 +45,6 @@
 
       PATH="$PATH:$HOME/.local/bin"
       if [ -e /home/icedborn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/icedborn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
-      # Inject dbus address
-      . <(ps | grep gnome-session-binary | head -n1 | awk '{print $1}' | xargs -I {} bash -c 'cat /proc/{}/environ | tr "\0" "\n" | grep DBUS' | xargs -I {} echo "export {}")
     '';
   };
 }
