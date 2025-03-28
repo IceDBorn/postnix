@@ -57,6 +57,7 @@ in
     "org/gnome/desktop/background".picture-uri = wallpaper;
     "org/gnome/desktop/background".picture-uri-dark = wallpaper;
     "org/gnome/desktop/screensaver".picture-uri = wallpaper;
+    "org/gnome/desktop/search-providers".disable-external = true;
 
     "org/gnome/desktop/privacy" = {
       remember-recent-files = false;
