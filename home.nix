@@ -27,7 +27,6 @@ in
     file-roller
     git
     gnome-calculator
-    gnome-calendar
     gnome-text-editor
     harmony-music
     lazygit
