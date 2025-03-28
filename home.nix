@@ -25,7 +25,6 @@ in
     curl
     decoder
     file-roller
-    fractal
     git
     gnome-calculator
     gnome-calendar
